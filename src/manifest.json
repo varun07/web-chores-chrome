@@ -1,13 +1,16 @@
 {
-  "name": "Chrome Extension Webpack",
-  "options_page": "options.html",
-  "background": {
-    "page": "background.html"
-  },
-  "browser_action": {
-    "default_popup": "popup.html",
-    "default_icon": "icon-34.png"
-  },
+  "name": "InfoEdge Chores",
+  "description": "It adds a set of cool buttons and links which eliminates boring and repitive task",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["*://*.infoedge.com/*"],      
+      "js": ["content_scripts.bundle.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab"
+  ],
   "icons": {
     "128": "icon-128.png"
   },
